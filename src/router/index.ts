@@ -5,7 +5,7 @@ import { RouteRecordRaw } from 'vue-router';
 const routes: Array<RouteRecordRaw> = [
   {
     path: '',
-    redirect: '/negocio'
+    redirect: '/kpis'
   },
   {
     path: '/negocio',

@@ -1,0 +1,7 @@
+{
+  "name": "jpa-server-dashboard",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}

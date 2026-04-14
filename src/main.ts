@@ -28,11 +28,7 @@ import '@ionic/vue/css/display.css';
  */
 
 import '@ionic/vue/css/palettes/dark.always.css'; 
-<<<<<<< HEAD
 import '@ionic/vue/css/palettes/dark.class.css'; 
-=======
-import '@ionic/vue/css/palettes/dark.class.css';
->>>>>>> bcdeaeaca55ca974d379697bd6018883b60860cc
 import '@ionic/vue/css/palettes/dark.system.css';
 
 /* Theme variables */

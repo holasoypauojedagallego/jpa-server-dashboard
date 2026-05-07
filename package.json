@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
+    "ionic:serve": "vite",
     "test:e2e": "cypress run",
     "test:unit": "vitest",
     "lint": "eslint ."
@@ -20,8 +21,13 @@
     "@ionic/vue": "^8.0.0",
     "@ionic/vue-router": "^8.0.0",
     "apexcharts": "^5.10.6",
+    "chart.js": "^4.5.1",
+    "echarts": "^6.0.0",
+    "ionic": "^5.4.16",
     "ionicons": "^7.0.0",
     "vue": "^3.3.0",
+    "vue-chart-3": "^4.0.1",
+    "vue-echarts": "^8.0.1",
     "vue-router": "^4.2.0",
     "vue3-apexcharts": "^1.11.1"
   },

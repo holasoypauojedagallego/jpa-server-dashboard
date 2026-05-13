@@ -5,7 +5,7 @@
         <ion-buttons slot="start">
           <ion-menu-button color="primary"></ion-menu-button>
         </ion-buttons>
-        <ion-title>🚀 JPA Servers - Negocio</ion-title>
+        <ion-title>JPA Servers - Negocio</ion-title>
       </ion-toolbar>
     </ion-header>
 

@@ -259,7 +259,6 @@ const heatmapOptions = {
 }
 .progress-fill { height: 100%; background: #3dc2ff; transition: width 0.5s ease; }
 
-/* Ajustes de alturas relativas en desktop */
 @media (min-width: 992px) {
   .ion-row-1 { height: 28%; }
   .ion-row-2 { height: 35%; }

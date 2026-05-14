@@ -80,62 +80,74 @@ interface SmartGoal {
 const smartGoalsNegocio = ref<SmartGoal[]>([
   {
     id: 1,
-    title: "Aumentar visitas",
-    description: "Aumentar las visitas de nuestro sitio web en un 50% (de 1000 a 1500) en los siguientes 30 días, al duplicar la distribución de contenido y con el fin de prepararnos para el lanzamiento de nuestro nuevo producto",
+    title: "Optimización de Infraestructura (ApexCharts)",
+    description: "Mantener la ocupación de servidores por debajo del 85% de la capacidad máxima visualizada en el gráfico de área, escalando recursos si se superan los 25 servidores activos de forma constante.",
     smart: [
-      { letter: "S", content: "Aumentar las visitas de nuestro sitio web en un 50%" },
-      { letter: "M", content: "50% (de 1,000 a 1,500)" },
-      { letter: "A", content: "duplicando la distribución de contenido" },
-      { letter: "R", content: "para prepararnos para el lanzamiento de nuestro nuevo producto." },
-      { letter: "T", content: "en los siguientes 30 días" }
+      { letter: "S", content: "Monitorear la serie 'Servidores Activos' frente a 'Capacidad Máxima' en el ApexMixedChart." },
+      { letter: "M", content: "No exceder el 85% de ocupación (máximo 25/30 servidores)." },
+      { letter: "A", content: "Ajustando el balanceo de carga y activando nodos adicionales en el VPS." },
+      { letter: "R", content: "Garantizar que siempre haya slots libres para nuevos alquileres de servidores." },
+      { letter: "T", content: "Revisión de logs de infraestructura cada domingo." }
     ]
   },
   {
     id: 2,
-    title: "Aumentar ventas",
-    description: "Aumentar las ventas en un 20% (de $200,000 a $240,000) en los próximos 12 meses, ofreciendo nuestros nuevos productos a los clientes existentes.",
+    title: "Preferencia de Contenido (Chart.js)",
+    description: "Lograr que el circuito 'Nordschleife' alcance al menos un 30% de cuota en el gráfico de Doughnut, promocionando eventos específicos para diversificar el uso más allá de Monza.",
     smart: [
-      { letter: "S", content: "Aumentar las ventas en un 20%" },
-      { letter: "M", content: "20% (de $200,000 a $240,000)" },
-      { letter: "A", content: "ofreciendo nuestros nuevos productos a los clientes existentes" },
-      { letter: "R", content: "(retención de clientes y aumentar ventas)" },
-      { letter: "T", content: "próximos 12 meses" }
+      { letter: "S", content: "Aumentar el segmento correspondiente a 'Nordschleife' en el gráfico de circuitos." },
+      { letter: "M", content: "Alcanzar un 30% de preferencia (actualmente en 20%)." },
+      { letter: "A", content: "Lanzando una campaña de 'Especial Resistencia' en redes sociales." },
+      { letter: "R", content: "Rentabilizar la inversión en mods y circuitos premium menos utilizados." },
+      { letter: "T", content: "Medición al finalizar el próximo mes." }
     ]
   },
   {
     id: 3,
-    title: "Ampliar equipo de marketing",
-    description: "Ampliar el equipo de marketing en un 10% (de 100 a 110 empleados) para finales del primer trimestre del próximo año, al contratar 3 empleados cada 3 meses para completar el equipo de creación de contenido.",
+    title: "Conversión de Embudo (ECharts)",
+    description: "Mejorar la tasa de conversión en el gráfico de Funnel, logrando que el 25% de los usuarios que 'Configuran Server' terminen en 'Server Lanzado'.",
     smart: [
-      { letter: "S", content: "Ampliar el equipo de marketing en un 10%" },
-      { letter: "M", content: "10% (de 100 a 110 empleados)" },
-      { letter: "A", content: "contratando a 3 empleados cada 3 meses" },
-      { letter: "R", content: "para completar el equipo de creación de contenido" },
-      { letter: "T", content: "para finales del primer trimestre del próximo año" }
+      { letter: "S", content: "Reducir la brecha entre el segundo y cuarto nivel del EchartsFunnel." },
+      { letter: "M", content: "Subir la conversión final del 20% actual al 25%." },
+      { letter: "A", content: "Simplificando el formulario de registro y los pasos de pago." },
+      { letter: "R", content: "Maximizar el retorno de inversión (ROI) del tráfico web atraído." },
+      { letter: "T", content: "Evaluación en el dashboard de negocio en 60 días." }
     ]
   },
   {
     id: 4,
-    title: "Alianzas estratégicas",
-    description: "Crear 10 alianzas estratégicas en el próximo bienio por medio de la organización de foros, y así obtener más exposición de marca y mejorar la red de proveedores.",
+    title: "Popularidad de Flota (Gráfico Propio)",
+    description: "Posicionar el 'Porsche 911 GT3' como el coche más usado en el Ranking de Mods, incrementando su barra de progreso hasta el 90% mediante la actualización de sus físicas.",
     smart: [
-      { letter: "S", content: "Crear alianzas estratégicas" },
-      { letter: "M", content: "10 alianzas estratégicas" },
-      { letter: "A", content: "por medio de la organización de foros" },
-      { letter: "R", content: "obtener más exposición de marca y mejorar la red de proveedores" },
-      { letter: "T", content: "en 2 años" }
+      { letter: "S", content: "Subir el valor de .bar-fill para el Porsche en el componente TopModsRanking." },
+      { letter: "M", content: "Pasar del 62% al 90% de uso detectado por los logs." },
+      { letter: "A", content: "Actualizando el mod a la versión 2026 con mejores sonidos y físicas." },
+      { letter: "R", content: "Mantener a la comunidad interesada en el contenido técnico de alta calidad." },
+      { letter: "T", content: "Trimestre en curso." }
     ]
   },
   {
     id: 5,
-    title: "Leads calificados",
-    description: "Aumentar la cantidad de leads calificados de 300 a 3000 en un período de 6 meses con la creación de 5 nuevas ofertas de contenido.",
+    title: "Crecimiento de Comunidad (Tiempo Real)",
+    description: "Estabilizar el indicador de 'Pilotos en Vivo' por encima de los 150 usuarios concurrentes durante las horas pico de la tarde.",
     smart: [
-      { letter: "S", content: "Aumentar la cantidad de leads calificados" },
-      { letter: "M", content: "de 300 a 3000" },
-      { letter: "A", content: "con la creación de 5 nuevas ofertas de contenido" },
-      { letter: "R", content: "(aumentar las posibilidades de venta)" },
-      { letter: "T", content: "en un período de 6 meses" }
+      { letter: "S", content: "Mantener el valor de .live-number por encima de 150 de forma sostenida." },
+      { letter: "M", content: "Incrementar la media de 128 a 150 pilotos concurrentes." },
+      { letter: "A", content: "Organizando torneos diarios de 19:00 a 22:00 CET." },
+      { letter: "R", content: "Fomentar una comunidad activa que atraiga a nuevos suscriptores por efecto red." },
+      { letter: "T", content: "Monitoreo diario con reporte de picos cada 24 horas." }
+    ]
+  },
+  {
+    id: 6,
+    title: "Captación de Nuevos Clientes (Sparkline)",
+    description: "Aumentar la tendencia del gráfico morado de 'Nuevos Usuarios' para captar 60 nuevos registros semanales de forma orgánica.",
+    smart: [
+      { letter: "S", content: "Mantener la curva del SparkLine morado con tendencia ascendente." },
+      { letter: "M", content: "Llegar a una media de 60 usuarios nuevos (actualmente 42)." },
+      { letter: "A", content: "Mejorando el SEO de la plataforma JPA Servers." },
+      { letter: "R", content: "Asegurar el crecimiento constante de la base de datos de clientes." },
+      { letter: "T", content: "Análisis de tendencia en los próximos 30 días." }
     ]
   }
 ]);

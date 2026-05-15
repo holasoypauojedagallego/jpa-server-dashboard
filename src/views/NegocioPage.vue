@@ -16,11 +16,8 @@
         </ion-toolbar>
       </ion-header>
 
-      <!-- Grid principal del Dashboard -->
       <ion-grid class="dashboard-grid">
         
-
-        <!-- 🟢 Fila 1: KPIs Rápidos (Propio y Tiempo Real) -->
         <ion-row class="ion-row-1">
           <ion-col size="12" size-lg="6">
             <div class="box">
@@ -31,7 +28,6 @@
 
           <ion-col size="12" size-lg="6">
             <div class="box">
-              <!-- KPI Tiempo Real: Pilotos -->
               <div class="realtime-container">
                 <ion-note>PILOTOS CONECTADOS (LIVE)</ion-note>
                 <h1 class="live-number">{{ livePilots }}</h1>
@@ -44,9 +40,7 @@
           </ion-col>
         </ion-row>
 
-        <!-- 🔵 Fila 2: Análisis (Chart.js y ApexCharts) -->
         <ion-row class="ion-row-2">
-          <!-- Columna Pequeña: Chart.js (Circuitos) -->
           <ion-col size="12" size-lg="4">
             <div class="box flex-column">
               <ion-note style="margin-bottom: 10px;">CIRCUITOS POPULARES</ion-note>
@@ -56,7 +50,6 @@
             </div>
           </ion-col>
 
-          <!-- COLUMNA GRANDE: ApexCharts (Uso de infraestructura) -->
           <ion-col size="12" size-lg="8">
             <div class="box">
               <div class="chart-wrapper-apex">
@@ -67,7 +60,6 @@
           </ion-col>
         </ion-row>
 
-        <!-- 🟠 Fila 3: Estrategia (ECharts y Sparkline) -->
         <ion-row class="ion-row-3">
           <ion-col size="12" size-lg="4">
             <div class="box">
@@ -96,7 +88,6 @@ import {
 } from '@ionic/vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// Importación de Librerías de Gráficos
 import { DoughnutChart } from 'vue-chart-3'
 import { Chart, registerables } from 'chart.js'
 import ApexMixedChart from '@/components/ApexMixedChart.vue'
@@ -106,7 +97,6 @@ import TopModsRanking from '@/components/TopModsRanking.vue'
 
 Chart.register(...registerables)
 
-// --- 1. Lógica de Tiempo Real ---
 const livePilots = ref(55)
 let interval: any
 onMounted(() => {
@@ -116,7 +106,6 @@ onMounted(() => {
 })
 onUnmounted(() => clearInterval(interval))
 
-// --- 2. Datos ApexCharts (Servidores JPA) ---
 const serverUsageSeries = ref([
   {
     name: 'Servidores Activos',
@@ -130,7 +119,6 @@ const serverUsageSeries = ref([
   }
 ])
 
-// --- 3. Datos Chart.js (Circuitos) ---
 const circuitsData = {
   labels: ['Monza', 'Spa', 'Nordschleife', 'Otros'],
   datasets: [{
@@ -150,15 +138,12 @@ const circuitsOptions = {
   plugins: { legend: { position: 'bottom' as const, labels: { color: '#fff' } } }
 }
 
-// --- 4. Datos Sparkline ---
 const sparkData1 = ref({
-  /* Propiedades del componente */
   title: "Usuarios registrados",
   value: "333",
   bgColor: "gradient-purple",
   textColor: "white",
   iconName: "navigate-outline",
-  /* Propiedades del componentes interno de ApexChart */
   chartOptions: {
     chart: {
       id: 'clicks',
@@ -176,7 +161,6 @@ const sparkData1 = ref({
 
 
 <style scoped>
-/* Grid y Layout */
 ion-row { overflow: hidden; }
 ion-col { --ion-grid-column-padding: 10px; }
 
@@ -196,13 +180,11 @@ ion-col { --ion-grid-column-padding: 10px; }
 
 .flex-column { flex-direction: column; align-items: flex-start; }
 
-/* Contenedores específicos para que los gráficos no se desborden */
 .chart-wrapper-js, .chart-wrapper-apex {
   width: 100%;
   height: 100%;
 }
 
-/* Estilos Tiempo Real */
 .realtime-container { text-align: center; color: black; }
 .live-number { font-size: 3.5rem; margin: 10px 0; color: #2dd36f; font-weight: 800; }
 .pulse-wrapper { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.8rem; color: #888; }
@@ -214,7 +196,6 @@ ion-col { --ion-grid-column-padding: 10px; }
   100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(45, 211, 111, 0); }
 }
 
-/* Layout responsive desktop */
 @media (min-width: 992px) {
   .ion-row-1 { height: 25%; }
   .ion-row-2 { height: 40%; }

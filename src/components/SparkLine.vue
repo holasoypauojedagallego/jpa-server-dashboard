@@ -27,7 +27,6 @@ import vapexChart from 'vue3-apexcharts';
 import { ref, watchEffect, onUnmounted } from 'vue';
 
 
-// 📌 Registrar iconos
 addIcons({
   'logo-ionic': logoIonic,
   'navigate-outline': navigateOutline,
@@ -37,12 +36,11 @@ addIcons({
 });
 
 
-// 📌 Definir Props para datos dinámicos
 defineProps({
   title: { type: String, default: 'Metrica',  },
   value: { type: String, default: '#Value',   },
-  chartOptions: {type: Object, required: true, }, // Se espera un objeto de configuración de ApexCharts
-  chartSeries: { type: Array, required: true, }, // Se espera un array con los datos de la serie
+  chartOptions: {type: Object, required: true, },
+  chartSeries: { type: Array, required: true, },
   bgColor: { type: String, default: '', },
   textColor: { type: String, default: '', },
   iconName: { type: String, default: 'logo-ionic', },
@@ -53,37 +51,29 @@ defineProps({
 
 
 
-/******* Control altura gráfico según ancho ********************/
-
-
 const chartHeight = ref("50%");
 
 
-// Función que ajusta la altura dinámicamente
 const updateChartHeight = () => {
   const width = window.innerWidth;
 
 
-  if (width < 576) chartHeight.value = "30%"; // Breakpoint xs
-  else if (width < 768) chartHeight.value = "40%"; // Breakpoint sm
-  else chartHeight.value = "50%"; // Breakpoint md y superiores
+  if (width < 576) chartHeight.value = "30%";
+  else if (width < 768) chartHeight.value = "40%";
+  else chartHeight.value = "50%";
 };
 
 
-// Ejecutar al cargar y escuchar cambios en el tamaño de la ventana
 watchEffect(() => {
   updateChartHeight();
   window.addEventListener("resize", updateChartHeight);
 });
 
 
-// Limpiar el listener cuando el componente se desmonta
 onUnmounted(() => {
   window.removeEventListener("resize", updateChartHeight);
 });
 
-
-/************************************************************ */
 
 
 </script>
@@ -92,7 +82,6 @@ onUnmounted(() => {
 <style scoped>
 
 
-/* Mobile first */
 
 
 .box-sparkline{
@@ -139,7 +128,6 @@ onUnmounted(() => {
 }
 
 
-/* Siendo más ancho, pasamos dato a la derecha de título */
 
 
 @container box (width >= 324px) {
@@ -163,9 +151,7 @@ onUnmounted(() => {
 }
 
 
-/* 🖥️ En pantallas grandes (>=lg=992) */
 @media (min-width: 992px) {
-  /* Si el componente no es muy ancho: detalles izquierda, datos derecha*/
   @container box (width <= 356px){
     .details{
       flex-direction: row;
@@ -173,7 +159,6 @@ onUnmounted(() => {
       align-items: start;
       gap: 16px;
     }
-   /* Para anchos de contenedores muy pequeños */
     .details > span {
       font-size: max(1.7rem, 16cqw);
     }
@@ -187,7 +172,6 @@ onUnmounted(() => {
 }
 
 
-/* 🎨 Colores de fondo */
 .gradient-blue {background-image: linear-gradient( 135deg, #071c49 10%, #0396FF 100%);}
 .gradient-green {background-image: linear-gradient( 135deg, #054d43 10%, #6be084 100%);}
 .gradient-orange {background-image: linear-gradient( 135deg, #f31b4a 10%, #e78f30 100%);}

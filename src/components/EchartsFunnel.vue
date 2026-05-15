@@ -36,7 +36,8 @@
           show: true,
           position: 'inside',
           color: '#fff',
-          fontSize: 12
+          fontSize: 12,
+          fontWeight: 900
         },
         itemStyle: {
           borderColor: '#1e1e1e',
@@ -47,9 +48,9 @@
         },
         data: [
           { value: 100, name: 'Visitas Web' },
-          { value: 75, name: 'Configura Server' },
-          { value: 40, name: 'Registro' },
-          { value: 20, name: 'Server Lanzado' }
+          { value: 75, name: 'Registro' },
+          { value: 40, name: 'Configura Server' },
+          { value: 20, name: 'Crear Server' }
         ]
       }
     ]

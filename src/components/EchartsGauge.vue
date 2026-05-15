@@ -7,20 +7,16 @@
 
 
 <script setup lang="ts">
-// Echarts
 import { use } from "echarts/core";
 import VEChart from "vue-echarts";
 import { GaugeChart } from "echarts/charts";
 import { CanvasRenderer } from "echarts/renderers";
 import { TooltipComponent } from "echarts/components";
 
-
-// Registrar los módulos necesarios de ECharts
 use([GaugeChart, CanvasRenderer, TooltipComponent]);
 
 const props = defineProps<{ value: number, title?: string }>();
 
-// 🌡️ Configuración Gauge
 const options = ref({});
 
 
@@ -95,7 +91,6 @@ watchEffect(() => {
   };
 });
 
-// 🧭 Data: EchartsGauge
 const dataGauge = ref(70);
 
 </script>

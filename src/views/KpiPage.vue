@@ -158,7 +158,7 @@ const smartGoalsTecnico = ref<SmartGoal[]>([
     title: "Estado de Microservicios",
     description: "Garantizar que Auth Server, Race Engine y DB Cluster se mantengan en estado 'online', resolviendo la alerta de latencia en Assetto API para alcanzar un uptime del 99%.",
     smart: [
-      { letter: "S", content: "Mantener los indicadores de la status-list en color verde (clase .online)." },
+      { letter: "S", content: "Mantener los indicadores de la status-list en color verde." },
       { letter: "M", content: "Lograr un 99% de disponibilidad mensual en los 4 servicios core." },
       { letter: "A", content: "Interviniendo el servicio Assetto API que actualmente reporta 145ms." },
       { letter: "R", content: "Asegurar que los usuarios puedan autenticarse y competir sin desconexiones." },
@@ -171,7 +171,7 @@ const smartGoalsTecnico = ref<SmartGoal[]>([
     description: "Estabilizar la curva del gráfico de latencia para eliminar picos de 145ms, estableciendo un techo máximo de 50ms mediante la optimización de rutas.",
     smart: [
       { letter: "S", content: "Suavizar la fluctuación en el apexchart de latencia de red." },
-      { letter: "M", content: "Reducir el pico actual de 145ms a una media inferior a 50ms." },
+      { letter: "M", content: "Reducir el pico actual de 60ms - 65ms a una media inferior a 50ms." },
       { letter: "A", content: "Optimizando los tiempos de respuesta del Race Engine y Assetto API." },
       { letter: "R", content: "Eliminar el lag percibido por los pilotos durante las carreras." },
       { letter: "T", content: "Implementación y mejora en los próximos 15 días." }
@@ -182,7 +182,7 @@ const smartGoalsTecnico = ref<SmartGoal[]>([
     title: "Uso de CPU Global",
     description: "Optimizar el consumo de recursos para que la fluctuación de la carga técnica se mantenga siempre por debajo del umbral del 70%, evitando saturaciones.",
     smart: [
-      { letter: "S", content: "Controlar el valor de la clase .live-number y el ancho de .progress-fill." },
+      { letter: "S", content: "Controlar el valor del uso de la CPU y el ancho de banda." },
       { letter: "M", content: "No exceder el 70% de uso de CPU en el dashboard en tiempo real." },
       { letter: "A", content: "Ajustando la carga de procesos distribuidos en el grid del servidor." },
       { letter: "R", content: "Prevenir bloqueos del sistema o sobrecalentamiento de los nodos." },

@@ -58,13 +58,11 @@ const props = withDefaults(defineProps<{
         stops: [0, 100, 100, 100],
       }
     },
-    // --- CAMBIO: Días de la semana ---
     labels: [
       'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'
     ],
     markers: { size: 0 },
     xaxis: {
-      // --- CAMBIO: De 'datetime' a 'category' ---
       type: 'category',
       labels: {
         style: { colors: '#8C8C8C' }

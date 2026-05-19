@@ -76,78 +76,77 @@ interface SmartGoal {
 }
 
 
-// Array de objetivos SMART
 const smartGoalsNegocio = ref<SmartGoal[]>([
   {
     id: 1,
-    title: "Optimización de Infraestructura (ApexCharts)",
-    description: "Mantener la ocupación de servidores por debajo del 85% de la capacidad máxima visualizada en el gráfico de área, escalando recursos si se superan los 25 servidores activos de forma constante.",
-    smart: [
-      { letter: "S", content: "Monitorear la serie 'Servidores Activos' frente a 'Capacidad Máxima' en el ApexMixedChart." },
-      { letter: "M", content: "No exceder el 85% de ocupación (máximo 25/30 servidores)." },
-      { letter: "A", content: "Ajustando el balanceo de carga y activando nodos adicionales en el VPS." },
-      { letter: "R", content: "Garantizar que siempre haya slots libres para nuevos alquileres de servidores." },
-      { letter: "T", content: "Revisión de logs de infraestructura cada domingo." }
-    ]
-  },
-  {
-    id: 2,
-    title: "Preferencia de Contenido (Chart.js)",
-    description: "Lograr que el circuito 'Nordschleife' alcance al menos un 30% de cuota en el gráfico de Doughnut, promocionando eventos específicos para diversificar el uso más allá de Monza.",
-    smart: [
-      { letter: "S", content: "Aumentar el segmento correspondiente a 'Nordschleife' en el gráfico de circuitos." },
-      { letter: "M", content: "Alcanzar un 30% de preferencia (actualmente en 20%)." },
-      { letter: "A", content: "Lanzando una campaña de 'Especial Resistencia' en redes sociales." },
-      { letter: "R", content: "Rentabilizar la inversión en mods y circuitos premium menos utilizados." },
-      { letter: "T", content: "Medición al finalizar el próximo mes." }
-    ]
-  },
-  {
-    id: 3,
-    title: "Conversión de Embudo (ECharts)",
-    description: "Mejorar la tasa de conversión en el gráfico de Funnel, logrando que el 25% de los usuarios que 'Configuran Server' terminen en 'Server Lanzado'.",
-    smart: [
-      { letter: "S", content: "Reducir la brecha entre el segundo y cuarto nivel del EchartsFunnel." },
-      { letter: "M", content: "Subir la conversión final del 20% actual al 25%." },
-      { letter: "A", content: "Simplificando el formulario de registro y los pasos de pago." },
-      { letter: "R", content: "Maximizar el retorno de inversión (ROI) del tráfico web atraído." },
-      { letter: "T", content: "Evaluación en el dashboard de negocio en 60 días." }
-    ]
-  },
-  {
-    id: 4,
-    title: "Popularidad de Flota (Gráfico Propio)",
+    title: "Popularidad de Flota (Gráfico Propio - Fila 1 Izquierda)",
     description: "Posicionar el 'Porsche 911 GT3' como el coche más usado en el Ranking de Mods, incrementando su barra de progreso hasta el 90% mediante la actualización de sus físicas.",
     smart: [
-      { letter: "S", content: "Subir el valor de .bar-fill para el Porsche en el componente TopModsRanking." },
+      { letter: "S", content: "Subir el valor de la barra para el Porsche en el componente de coches más usados." },
       { letter: "M", content: "Pasar del 62% al 90% de uso detectado por los logs." },
-      { letter: "A", content: "Actualizando el mod a la versión 2026 con mejores sonidos y físicas." },
+      { letter: "A", content: "Actualizando el mod con mejores sonidos y físicas de competición." },
       { letter: "R", content: "Mantener a la comunidad interesada en el contenido técnico de alta calidad." },
       { letter: "T", content: "Trimestre en curso." }
     ]
   },
   {
-    id: 5,
-    title: "Crecimiento de Comunidad (Tiempo Real)",
+    id: 2,
+    title: "Crecimiento de Comunidad (Tiempo Real - Fila 1 Derecha)",
     description: "Estabilizar el indicador de 'Pilotos en Vivo' por encima de los 150 usuarios concurrentes durante las horas pico de la tarde.",
     smart: [
-      { letter: "S", content: "Mantener el valor de .live-number por encima de 150 de forma sostenida." },
-      { letter: "M", content: "Incrementar la media de 128 a 150 pilotos concurrentes." },
-      { letter: "A", content: "Organizando torneos diarios de 19:00 a 22:00 CET." },
+      { letter: "S", content: "Mantener el valor del contador central por encima de 150 de forma sostenida." },
+      { letter: "M", content: "Incrementar la media actual a 150 pilotos concurrentes." },
+      { letter: "A", content: "Organizando torneos diarios automatizados en horas pico." },
       { letter: "R", content: "Fomentar una comunidad activa que atraiga a nuevos suscriptores por efecto red." },
       { letter: "T", content: "Monitoreo diario con reporte de picos cada 24 horas." }
     ]
   },
   {
-    id: 6,
-    title: "Captación de Nuevos Clientes (Sparkline)",
-    description: "Aumentar la tendencia del gráfico morado de 'Nuevos Usuarios' para captar 60 nuevos registros semanales de forma orgánica.",
+    id: 3,
+    title: "Preferencia de Contenido (Chart.js - Fila 2 Izquierda)",
+    description: "Lograr que el circuito 'Nordschleife' alcance al menos un 30% de cuota en el gráfico de Doughnut, promocionando eventos específicos para diversificar el uso más allá de Monza.",
     smart: [
-      { letter: "S", content: "Mantener la curva del SparkLine morado con tendencia ascendente." },
-      { letter: "M", content: "Llegar a una media de 60 usuarios nuevos (actualmente 42)." },
-      { letter: "A", content: "Mejorando el SEO de la plataforma JPA Servers." },
-      { letter: "R", content: "Asegurar el crecimiento constante de la base de datos de clientes." },
+      { letter: "S", content: "Aumentar el segmento correspondiente a 'Nordschleife' en el gráfico de circuitos." },
+      { letter: "M", content: "Alcanzar un 30% de preferencia (actualmente en 20%)." },
+      { letter: "A", content: "Lanzando una campaña de 'Especial Resistencia' en los servidores públicos." },
+      { letter: "R", content: "Rentabilizar la inversión en infraestructura de circuitos premium." },
+      { letter: "T", content: "Medición al finalizar el próximo mes." }
+    ]
+  },
+  {
+    id: 4,
+    title: "Optimización de Infraestructura (ApexCharts - Fila 2 Derecha)",
+    description: "Mantener la ocupación de servidores por debajo del 85% de la capacidad máxima visualizada en el gráfico de área, escalando recursos si se superan los 25 servidores activos de forma constante.",
+    smart: [
+      { letter: "S", content: "Monitorear la serie 'Servidores Activos' frente a la línea verde de 'Capacidad Máxima' en el gráfico de uso semanal." },
+      { letter: "M", content: "No exceder el 85% de ocupación (máximo 25 servidores activos)." },
+      { letter: "A", content: "Ajustando el balanceo de carga y activando nodos adicionales si la curva se acerca al límite." },
+      { letter: "R", content: "Garantizar que siempre haya slots libres para nuevos alquileres sin saturar el nodo." },
+      { letter: "T", content: "Revisión de logs de infraestructura cada domingo." }
+    ]
+  },
+  {
+    id: 5,
+    title: "Captación de Nuevos Clientes (Sparkline - Fila 3 Izquierda)",
+    description: "Aumentar la tendencia del gráfico morado de 'Usuarios Registrados' para captar 60 nuevos registros semanales de forma orgánica.",
+    smart: [
+      { letter: "S", content: "Mantener la curva inferior del Sparkline morado con tendencia ascendente estable." },
+      { letter: "M", content: "Llegar a una media de 60 usuarios nuevos (superando la marca actual)." },
+      { letter: "A", content: "Mejorando el SEO de la plataforma JPA Servers y simplificando la landing page." },
+      { letter: "R", content: "Asegurar el crecimiento constante de la base de datos de clientes activos." },
       { letter: "T", content: "Análisis de tendencia en los próximos 30 días." }
+    ]
+  },
+  {
+    id: 6,
+    title: "Conversión de Embudo (ECharts - Fila 3 Derecha)",
+    description: "Mejorar la tasa de conversión en el gráfico de Funnel, logrando que el 25% de los usuarios que 'Configuran Server' terminen en 'Crear Server'.",
+    smart: [
+      { letter: "S", content: "Reducir el estrechamiento drástico entre el tercer nivel (Configura Server) y el cuarto nivel (Crear Server) del embudo." },
+      { letter: "M", content: "Subir la conversión final del paso crítico al 25%." },
+      { letter: "A", content: "Simplificando los pasos de la pasarela de pago final." },
+      { letter: "R", content: "Maximizar el retorno de inversión convirtiendo el interés técnico en transacciones reales." },
+      { letter: "T", content: "Evaluación del comportamiento en el dashboard de negocio en 60 días." }
     ]
   }
 ]);
